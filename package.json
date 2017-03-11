@@ -1,0 +1,41 @@
+{
+  "name": "ges-proyectos",
+  "version": "1.0.0",
+  "description": "https://trello.com/app-key",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "browser-sync": "^2.18.8",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.10.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-count": "^0.3.0",
+    "gulp-header": "^1.8.8",
+    "gulp-postcss": "^6.3.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-string-replace": "^0.4.0",
+    "gulp-typescript": "^3.1.5",
+    "gulp-uglify": "^2.1.0",
+    "postcss-colormin": "^2.2.1",
+    "postcss-discard-duplicates": "^2.0.2",
+    "postcss-discard-empty": "^2.1.0",
+    "postcss-minify-font-values": "^1.0.5",
+    "postcss-minify-selectors": "^2.1.1",
+    "postcss-reduce-idents": "^2.4.0",
+    "run-sequence": "^1.2.2",
+    "systemjs": "^0.20.7",
+    "typescript": "^2.1.5"
+  }
+}
