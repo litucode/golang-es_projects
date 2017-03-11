@@ -35,7 +35,6 @@
     "postcss-minify-selectors": "^2.1.1",
     "postcss-reduce-idents": "^2.4.0",
     "run-sequence": "^1.2.2",
-    "systemjs": "^0.20.7",
     "typescript": "^2.1.5"
   }
 }
