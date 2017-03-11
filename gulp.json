@@ -1,0 +1,18 @@
+{
+	"pug": {
+		"watch": "dev/pug/**/*",
+		"dist": "dist"
+	},
+	"sass": {
+		"watch": "dev/sass/**/*.scss",
+        "temp": "temp/css",
+		"dist": "dist/assets/css",
+		"dist_name": "style.min.css"
+	},
+	"vendors": {
+		"css": ["temp/css/*"],
+		"js": [
+			"./node_modules/systemjs/dist/system.js"
+		]
+	}
+}
