@@ -1,9 +1,5 @@
 var trello = "https://api.trello.com/1/";
 
-var key = "";
-var token = "";
-
-var boards = "5892487fd52698baf84def4d";
 var params = "?fields=name,idList,url,desc&key=" + key + "&token=" + token
 var settings = {
     "async": true,
@@ -15,7 +11,7 @@ var settings = {
 function sendCard(data) {
     $.ajax({
         "crossDomain": true,
-        "url": "https://api.trello.com/1/cards?key=5b6acc18a246b40f94d88597ee419952&token=38a6b9b749cd83f05f68eba8a9094591fcc5464c15bd76b39e2eb168669faee1",
+        "url": "https://api.trello.com/1/cards?key=" + key + "&token=" + token,
         "method": "POST",
         "data": data
     }).done(function(response) {
