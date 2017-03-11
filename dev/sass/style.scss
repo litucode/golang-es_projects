@@ -1,0 +1,21 @@
+.mdl-textfield, .mdl-textfield__input {
+    width: 100%;
+    display: block;
+}
+
+.mdl-card__title {
+    font-size: 1.25rem;
+}
+
+.form-cell {
+    width: 100%;
+    display: block;
+
+    small {
+        display: block;
+    }
+}
+
+.mdl-card {
+    min-height: 125px;
+}
