@@ -8,6 +8,8 @@ var settings = {
     "method": "GET"
 }
 
+var converter = new showdown.Converter();
+
 function sendCard(data) {
     $.ajax({
         "crossDomain": true,
@@ -16,7 +18,7 @@ function sendCard(data) {
         "data": data
     }).done(function(response) {
         console.log(response);
-        var template = `<div id="${response.id}" class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone"><div class="mdl-card__title"><h3 class="mdl-card__title-text">${response.name}</h3></div><div class="mdl-card__supporting-text">${response.desc}</div></div>`
+        var template = `<div id="${response.id}" class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone"><div class="mdl-card__title"><h3 class="mdl-card__title-text">${response.name}</h3></div><div class="mdl-card__supporting-text">${converter.makeHtml(response.desc)}</div></div>`
         $('#boards').append(template);
     })
 }
@@ -24,7 +26,7 @@ function sendCard(data) {
 !(function () {
     $.ajax(settings).done( function(response) {
         $.each(response, function(index, value) {
-            var template = `<div id="${value.id}" class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone"><div class="mdl-card__title"><h3 class="mdl-card__title-text">${value.name}</h3></div><div class="mdl-card__supporting-text">${value.desc}</div></div>`
+            var template = `<div id="${value.id}" class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone"><div class="mdl-card__title"><h3 class="mdl-card__title-text">${value.name}</h3></div><div class="mdl-card__supporting-text">${converter.makeHtml(value.desc)}</div></div>`
             $('#boards').append(template);
             $('#idList').val(value.idList);
         });
@@ -42,4 +44,10 @@ function sendCard(data) {
         };
         sendCard(data);
     }, false);
+
+
+    $('#btnNews')[0].addEventListener('click', function (e) {
+        // e.preventDefault();
+        $('#news').toggleClass('hidden');
+    });
 })();

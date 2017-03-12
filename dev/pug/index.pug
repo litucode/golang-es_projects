@@ -18,11 +18,11 @@ html
 					span.mdl-layout__title Proyectos en Golang
 					.mdl-layout-spacer
 					nav.mdl-navigation
-						a.mdl-navigation__link(href='#') Agregar nuevo
+						a#btnNews.mdl-navigation__link(href='#news') Agregar nuevo
 
 			// main layout__content
 			main.mdl-layout__content
-				.mdl-grid
+				#news.mdl-grid.hidden
 					form#newCard.mdl-card.mdl-cell.mdl-cell--8-col
 						// name for project
 						.form-cell
@@ -48,7 +48,8 @@ html
 						.form-cell
 							button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored
 								| Enviar
-				#boards.mdl-grid
+				#boards.mdl-grid.bg-cards
 
 		script(src='http://code.jquery.com/jquery-1.11.3.min.js', type='text/javascript')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.4/showdown.min.js', type='text/javascript')
 		script(src='/assets/js/all.web.js', type='text/javascript')
