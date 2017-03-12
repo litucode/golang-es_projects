@@ -9,6 +9,11 @@
 		"dist": "dist/assets/css",
 		"dist_name": "style.min.css"
 	},
+	"images": {
+		"watch": "dev/img/**/*",
+        "temp": "temp/img",
+		"dist": "dist/assets/img"
+	},
 	"vendors": {
 		"css": ["temp/css/*"],
 		"js": [

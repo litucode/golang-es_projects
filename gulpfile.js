@@ -9,6 +9,8 @@ const uglify = require('gulp-uglify')
 const concat = require('gulp-concat')
 const count = require('gulp-count')
 
+require('./gulp_task/images_task.js')
+
 // Typescript
 require('./gulp_task/ts_task.js')
 
