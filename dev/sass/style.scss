@@ -1,12 +1,13 @@
-.mdl-textfield, .mdl-textfield__input {
-    width: 100%;
-    display: block;
+// card styles
+.mdl-card {
+    min-height: 125px;
 }
 
 .mdl-card__title {
     font-size: 1.25rem;
 }
 
+// form styles
 .form-cell {
     width: 100%;
     display: block;
@@ -16,6 +17,16 @@
     }
 }
 
-.mdl-card {
-    min-height: 125px;
+.mdl-textfield, .mdl-textfield__input {
+    width: 100%;
+    display: block;
+}
+
+// background with image for cards
+.bg-cards {
+    background-image: url('/assets/img/bg-cards.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
